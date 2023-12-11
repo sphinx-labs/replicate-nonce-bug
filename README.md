@@ -5,6 +5,7 @@ If you create a script that uses the `vm.startBroadcast(address)` cheat code to 
 
 ## Replication
 You can replicate the bug, by running the following command:
+
 `forge script ./script/Counter.s.sol --fork-url https://opt-sepolia.g.alchemy.com/v2/<alchemy api key>`
 
 > Note, you'll need to either use your own Alchemy API key or just use your own RPC url for Sepolia. 
