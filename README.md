@@ -4,9 +4,9 @@
 If you create a script that uses the `vm.startBroadcast(address)` cheat code to start a broadcast from an address with a nonzero nonce, then deploy a contract that uses an externally linked library, the transactions in the generated broadcast file will not all have correct nonces. The transaction to deploy the library will have the correct nonce but any following transactions will have nonces that start at 1. 
 
 ## Replication
-You can replicate the bug, by running the following command:
-
-`forge script ./script/Counter.s.sol --fork-url https://opt-sepolia.g.alchemy.com/v2/<alchemy api key>`
+To replicate the bug:
+- run ```foundryup```
+- then ```forge script ./script/Counter.s.sol --fork-url https://opt-sepolia.g.alchemy.com/v2/<alchemy api key>```
 
 > Note, you'll need to either use your own Alchemy API key or just use your own RPC url for Sepolia. 
 
